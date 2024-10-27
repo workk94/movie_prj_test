@@ -41,7 +41,7 @@ public class MovieApiService {
 		
 		conn.setRequestMethod("GET");
 		conn.setRequestProperty("Content-type", "application/json");
-
+		
 		BufferedReader rd = new BufferedReader(new InputStreamReader(
 				conn.getResponseCode() >= 200 && conn.getResponseCode() <= 300 ? conn.getInputStream()
 						: conn.getErrorStream()));
