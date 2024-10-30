@@ -1,0 +1,93 @@
+@charset "UTF-8";
+*{
+    box-sizing: border-box; /*전체에 박스사이징*/
+    outline: none; /*focus 했을때 테두리 🟠안 나오게 */
+    margin:0;
+    padding: 0;
+}
+body{
+    font-size:14px;
+    background-color: #f5f6f7;
+    color : #222;
+}
+
+
+.container{
+    width: 460px;
+   border: 1px solid rgb(128, 128, 192); 
+    margin: auto; /*중앙 정렬*/
+    padding: 0 20px;    margin-bottom: 20px;
+}
+.logo{
+    display: block;
+    margin: 50px auto;
+     max-width: 100%; /* 부모 요소의 너비에 맞춤 */
+    height: auto; /* 비율에 맞춰 자동 조절 */
+}
+.field{ 
+   margin :5px 0; 
+    color: rgb(0, 128, 192) ; 
+}
+
+/* 제목태그로 쓰임  제목아래와 여백주기 */
+label{   
+    display: block;
+    margin-bottom: 5px;
+}
+/*input 중 radio 외에 모든 속성 선택 */
+input:not(input[type=radio]), select{
+    border: 1px solid #dadada;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+/* input[type=button], input[type=submit]{
+    background-color: #2db400;
+    color:#fff
+} */
+.green{
+    background-color: rgb(128, 128, 255);
+    color: aliceblue;
+    cursor: pointer;
+}
+input:focus, select:focus{
+    border: 1px solid rgb(128, 128, 255);
+}
+.birth {
+    display: flex;
+}
+.birthY, .birthM{
+    margin-right: 10px;
+}
+
+.field.gender div{
+    border: 1px solid #dadada;
+    padding: 15px 5px;
+    background-color: #fff;
+}
+
+.placehold-text{  
+    position:relative;
+    
+}
+
+.placehold-text:after{ 
+    border: 1px solid red;
+    content : "@naver.com";
+    position : absolute; /*before은 inline 요소이기 때문에 span으로 감싸줌 */
+    right : 20px;
+    top : 13px;
+}
+.genderS{ 
+    margin: 0 5px;
+}
+textarea {
+    border: 1px solid #dadada;
+    padding: 10px;
+    width: 100%; /* 너비를 100%로 설정 */
+    resize: vertical; /* 세로 방향으로만 크기 조절 가능 */
+}
+
+textarea:focus {
+    border: 1px solid rgb(128, 128, 255); /* 포커스 시 테두리 색상 변경 */
+}
